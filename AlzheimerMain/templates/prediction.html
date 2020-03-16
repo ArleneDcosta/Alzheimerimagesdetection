@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+    Industrious by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>prediction</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+<style type="text/css">
+    .login-form {
+        background-color: white;
+        width: 340px;
+        margin: 50px auto;
+        
+    }
+    .login-form form {
+        margin-bottom: 15px;
+        background: white;
+        
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+         background-color: white
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+        background-color: white;
+    }
+    body{
+        background-color: white;
+    }
+</style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/index">Alzheimer predictor</a>
+                <nav>
+                    <a href="/index">Home</a>
+                    <a href="/login_form">Login</a>
+                    <a href="/signup_form">Sign up</a>
+                </nav>
+            </header>
+
+        <!-- Nav -->
+            
+        <!-- Heading -->
+            <div id="heading" >
+                <h1>Alzheimer Prediction</h1>
+                
+            </div>
+
+        
+      <div style="background-color: black;" class="login-form">
+        <form action="/predict_class" method="POST" enctype="multipart/form-data">  
+            <h4 style=" font-family:Arial,  sans-serif " class="text-center"><font color="grey"><b>Add Image</b></font><br><font size="2">
+                                                                            <font color="grey"><b>(Please Enter a 2D MRI Scan)</b></font></font></h4>       
+            <div class="form-group">
+                <input type="file" class="form-control" name="image" id="image" accept="image/jpeg" />
+            </div>
+            <div class="text-center">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-rounded text-center " >Predict</button>
+                </div> 
+            </div>
+                 
+        </form>
+    </div>
+
+
+
+</div>
+
+        <!-- Footer --> <footer id="footer">
+                <div class="inner">
+                    <div class="content">
+                        
+                        
+                        
+                        <section>
+                            
+                            <h4><center><font size="6">Follow Us on</font></center></h4>
+                            
+                                <a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter    </a>
+
+                                <a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a>
+
+                                <a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a>
+
+                                <a href="#"><i class="icon fa-github">&nbsp;</i>Github</a>
+                            
+                        </section>
+                    </div>
+                    <div class="copyright">
+                        &copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+                    </div>
+                </div>
+            </footer>
+
+        <!-- Scripts -->
+            <script src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+            <script src="{{ url_for('static',filename='browser.min.js') }}"></script>
+            <script src="{{ url_for('static',filename='breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static',filename='util.min.js') }}"></script>
+            <script src="{{ url_for('static',filename='main.js') }}"></script>
+
+    </body>
+</html>

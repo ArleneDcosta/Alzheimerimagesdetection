@@ -1,0 +1,4 @@
+fastai
+flask
+requests
+sklearn
