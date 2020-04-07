@@ -25,8 +25,8 @@ def prediction_page():
 
 @app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
-    if current_user.is_authenticated:
-        return render_template("prediction.html")
+    '''if current_user.is_authenticated:
+        return render_template("prediction.html")'''
     if request.method == "POST":    
         name = request.form["nm"]  
         email = request.form["email"] 
@@ -44,13 +44,14 @@ def addrec():
 
 @app.route('/login',methods = ['POST', 'GET'])
 def login():
-    if current_user.is_authenticated:
-        return render_template("prediction.html")
+    '''if current_user.is_authenticated:
+        return render_template("prediction.html")'''
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
         user = User.query.filter_by(username=username).first()
         if user and bcrypt.check_password_hash(user.password,password):
+            print("inside")
             login_user(user)
             return render_template("prediction.html")
         else:
